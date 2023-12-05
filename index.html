@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Host Scanner by Madison Technologies</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/cb.css" />
+  </head>
+
+  <body>
+    <header class="header-holder" style="">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="menu-wrapper center-relative relative">
+              <div class="header-logo">
+                <a href="https://madison-technologies.com">
+                  <img
+                    data-no-lazy="1"
+                    src="/img/Group-8.svg"
+                    alt="Madison Technologies"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2 class="madi-headline">Host Scanner</h2>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-10 fs-5">
+            <p>
+              Request a port scan on your domain that will be delivered to your
+              inbox upon completion. To scan your domain, enter your email
+              address below. Upon verification, your domain will be queued for
+              scanning. We will scan the top 100 TCP ports on your domain's IP
+              address.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="other">
+      <div class="row justify-content-md-center">
+        <div class="col-4 fs-6">
+          <div>
+            <!--            <h4 class="title" style="margin: 35px 0 25px 0 ;">Why Scan Your Host?</h4>-->
+            <div class="row" style="margin: 45px 0 0 0">
+              <div class="col">
+                <img src="/img/scan.svg" alt="IT Security" />
+                <p class="topic">Identify Open Ports</p>
+              </div>
+              <div class="col">
+                <img src="/img/ITSecurity.svg" alt="IT Security" />
+                <p class="topic">Find Potential Security Risks</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 fs-6 tab-content-item">
+          <h4 class="title">How Do I Interpret The Results?</h4>
+          <p>
+            Your emailed report will contain a grade and a list of open TCP
+            ports on your server. Use this report to confirm that you have no
+            unexpected open ports. Your grade tells you at a glance how your
+            open ports affect your security risk.
+          </p>
+          <table class="grade-table">
+            <tbody>
+              <tr>
+                <td class="grade green">A</td>
+                <td class="grade green">B</td>
+                <td class="grade orange">C</td>
+                <td class="grade orange">D</td>
+                <td class="grade red">E</td>
+                <td class="grade red">F</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="margin-top: 1rem">
+            For example, having ports 3306 (MySQL) or 1433 (MSSQL) open to the
+            public Internet can be a security risk and will give you a lower
+            grade because databases should not be accessed from the Internet.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-10">
+          <h4 class="title">Get Started</h4>
+          <p>
+            Enter your email address below and we will scan the Top 100 TCP
+            ports of your domain name. If your domain name resolves to more than
+            one IP address, then we will pick one to scan.
+          </p>
+          <form
+            action="/api/verify"
+            method="post"
+            hx-post="/api/verify"
+            hx-target="#response"
+            hx-swap="innerHTML"
+          >
+            <div class="mb-2">
+              <label for="email" class="form-label">Email Address:</label>
+              <input
+                type="email"
+                class="form-control input-type"
+                id="email"
+                name="email"
+                required
+                placeholder="user@example.com"
+              />
+            </div>
+            <input
+              class="css-checkbox"
+              type="checkbox"
+              id="terms"
+              value="1"
+              checked="checked"
+              aria-invalid="false"
+            />
+            <label for="terms">
+              <span
+                >I am authorized and have permission to scan the domain name
+                that is part of my email address. I agree to receive
+                communications in line with Madison Technologies’
+                <a href="#">Privacy Policy</a>. I can unsubscribe at any
+                time.</span
+              >
+            </label>
+
+            <div></div>
+
+            <div class="row">
+              <div class="col-3 my-auto">
+                <button type="submit" id="submit" class="btn">VERIFY</button>
+              </div>
+              <div class="col-7 col-md-8 my-auto">
+                <p id="response"></p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-content center-relative">
+        <div class="container">
+          <div class="row">
+            <div class="col-6 col-sm-6 col-md-4 text-left">
+              © Madison Technologies 2023
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/htmx.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script>
+      var myListener = htmx.on("#terms", "change", function (evt) {
+        if (document.querySelector("#terms").checked) {
+          let button = document.querySelector("#submit");
+          button.disabled = false;
+          button.className = "btn";
+        } else {
+          let button = document.querySelector("#submit");
+          button.disabled = true;
+          button.className = "btn disable";
+        }
+      });
+      htmx.on("htmx:responseError", function (evt) {
+        console.log(evt.detail.target);
+        evt.detail.target.innerHTML = evt.detail.xhr.response;
+      });
+    </script>
+  </body>
+</html>

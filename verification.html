@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+        }
+
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        .code {
+            background-color: #f1f1f1;
+            font-family: monospace;
+            font-size: 20px;
+            padding: 10px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .footer {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div style="width: auto;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  color:#000000 !important;">
+    <div style="font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color:#000000 !important;">
+        You're nearly there!
+    </div>
+    <div style="font-size: 16px;
+    text-align: left;
+    margin-bottom: 20px;
+    color:#000000 !important;">
+        <p style="color:#000000 !important;">Hello,</p>
+        <p style="color:#000000 !important;">Thanks for signing up to scan your domain with Madison Technologies' Host Scanner. To proceed and queue up your domain for scanning, please verify your email address by clicking below: </p>
+        <a href= "{{ .Token }}">
+            <button style=" border: none;
+        color: white;
+        border-radius: 6px;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        background-color: #48c6ff;">
+                Verify your email</button>
+        </a>
+        <p style="margin-bottom: 20px;color:#000000 !important;">If you did not request a scan or have no idea why you've received this email, no further action is necessary.</p>
+        <p style="color:#000000 !important;">Sincerely,</p>
+        <p style="color:#000000 !important;">Team Maddie</p>
+    </div>
+    <div style="font-size: 12px;
+    text-align: center;
+    margin-top: 20px;
+    color:#000000 !important;">
+        &copy; 2023 Madison Technologies. All rights reserved.
+    </div>
+</div>
+</body>
+</html>

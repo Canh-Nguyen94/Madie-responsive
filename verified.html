@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Host Scanner by Madison Technologies</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+<header class="header-holder" style="">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="menu-wrapper center-relative relative">
+                    <div class="header-logo">
+                        <a href="https://madison-technologies.com">
+                            <img data-no-lazy="1" src="/img/Group-8.svg" alt="Madison Technologies">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="madi-headline">
+                    Host Scanner
+                </h2>
+            </div>
+        </div>
+        <div class="row justify-content-md-center" style="height:200px;">
+            <div class="col-8 fs-5 text-center" style="margin-top:35px;">
+                <p>{{.Message}}</p>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <p id="response"></p>
+        </div>
+
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-content center-relative">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 text-left">© Madison Technologies 2023 </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/htmx.min.js"></script>
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script>
+    htmx.on("htmx:responseError", function (evt) {
+        evt.detail.target.innerHTML = evt.detail.xhr.response;
+    });
+</script>
+</body>
+
+</html>
