@@ -12,12 +12,10 @@
 
 @font-face {
   font-family: "SourceSansPro-Bold";
-  src: url("../fonts/SourceSansPro-Bold.eot?#iefix")
-  format("embedded-opentype"),
-  url("../fonts/SourceSansPro-Bold.woff2") format("woff"),
-  url("../fonts/SourceSansPro-Bold.ttf") format("truetype"),
-  url("../fonts/SourceSansPro-Bold.svg#SourceSansPro-Bold")
-  format("svg");
+  src: url("../fonts/SourceSansPro-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/SourceSansPro-Bold.woff2") format("woff"),
+    url("../fonts/SourceSansPro-Bold.ttf") format("truetype"),
+    url("../fonts/SourceSansPro-Bold.svg#SourceSansPro-Bold") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -25,11 +23,10 @@
 @font-face {
   font-family: "SourceSansPro-SemiBold";
   src: url("../fonts/SourceSansPro-SemiBold.eot?#iefix")
-  format("embedded-opentype"),
-  url("../fonts/SourceSansPro-SemiBold.woff") format("woff"),
-  url("../fonts/SourceSansPro-SemiBold.ttf") format("truetype"),
-  url("../fonts/SourceSansPro-SemiBold.svg#SourceSansPro-Bold")
-  format("svg");
+      format("embedded-opentype"),
+    url("../fonts/SourceSansPro-SemiBold.woff") format("woff"),
+    url("../fonts/SourceSansPro-SemiBold.ttf") format("truetype"),
+    url("../fonts/SourceSansPro-SemiBold.svg#SourceSansPro-Bold") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -67,11 +64,11 @@ body {
 }
 
 .btn {
-  font-family: 'SourceSansPro-SemiBold', serif;
+  font-family: "SourceSansPro-SemiBold", serif;
   font-size: 17px;
   line-height: 16px;
   padding: 15px 30px;
-  background-color: #48C6FF;
+  background-color: #48c6ff;
   color: #fff;
   border-radius: 25px;
   max-width: 242px;
@@ -82,43 +79,43 @@ body {
 }
 .btn:hover {
   color: #fff;
-  background-color: #24D5FD;
+  background-color: #24d5fd;
 }
 .btn.disable {
-  background-color: #B7B7B7
+  background-color: #b7b7b7;
 }
 .btn.disable:hover {
-  border-color: #B7B7B7;
-  color: #B7B7B7;
+  border-color: #b7b7b7;
+  color: #b7b7b7;
   background-color: transparent;
 }
 .btn.btn-background {
   background-color: #fff;
-  border: 2px solid #4CB1DF;
-  color: #48C6FF;
+  border: 2px solid #4cb1df;
+  color: #48c6ff;
 }
 .btn.btn-background:hover {
-  color: #24D5FD;
-  border-color: #24D5FD;
+  color: #24d5fd;
+  border-color: #24d5fd;
 }
 
 .madi-subheadline {
   font-size: 30px;
   line-height: 40px;
   color: #373737;
-  font-family: 'SourceSansPro-Bold';
+  font-family: "SourceSansPro-Bold";
   padding: 0;
   margin-top: 20px;
 }
 .madi-subheadline span {
-  color: #48C6FD;
+  color: #48c6fd;
 }
 
-.madi-headline { 
+.madi-headline {
   font-size: 60px;
   line-height: 70px;
-  color: #48C6FF;
-  font-family: 'AlfaSlabOne-Regular';
+  color: #48c6ff;
+  font-family: "AlfaSlabOne-Regular";
   letter-spacing: 3px;
 }
 
@@ -127,7 +124,6 @@ body {
   width: 85%;
   height: 58px;
 }
-
 
 .tab-member {
   margin-top: 50px;
@@ -138,23 +134,19 @@ body {
 }
 
 .tab-member .tab-content .tab-pane h3 {
-  line-height: 50px
+  line-height: 50px;
 }
 
-.tab-member{
+.tab-member {
   margin: 0 auto;
 }
 
 .tab-content-item {
   padding: 35px 25px 30px;
-  box-shadow: 4px 3px 6px 5px #F0F0F0;
+  box-shadow: 4px 3px 6px 5px #f0f0f0;
   border-radius: 8px;
+  /* overflow-y: auto; */
 }
-
-/*.tab-content-item {*/
-/*  width: 50%;*/
-/*  float: right;*/
-/*}*/
 
 .main-item {
   background: #fff;
@@ -182,26 +174,32 @@ body {
   line-height: 1.5;
 }
 
-.form-control::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-  color:    #AFAFAF;
+.form-control::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #afafaf;
 }
-.form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  color:    #AFAFAF;
-  opacity:  1;
+.form-control:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #afafaf;
+  opacity: 1;
 }
-.form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
-  color:    #AFAFAF;
-  opacity:  1;
+.form-control::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #afafaf;
+  opacity: 1;
 }
-.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color:    #AFAFAF;
+.form-control:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #afafaf;
 }
-.form-control::-ms-input-placeholder { /* Microsoft Edge */
-  color:    #AFAFAF;
+.form-control::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #afafaf;
 }
 
-.form-control::placeholder { /* Most modern browsers support this now. */
-  color:    #AFAFAF;
+.form-control::placeholder {
+  /* Most modern browsers support this now. */
+  color: #afafaf;
 }
 
 .footer {
@@ -209,7 +207,7 @@ body {
   clear: both;
   color: #373737;
   text-align: center;
-  font-family: 'SourceSansPro-Regular';
+  font-family: "SourceSansPro-Regular";
   font-weight: bold;
 }
 .footer .row {
@@ -217,33 +215,50 @@ body {
   height: 113px;
 }
 
-.copyright .fa.fa-linkedin,.footer .fa.fa-linkedin {
-  border: 2px solid #48c6ff
+.copyright .fa.fa-linkedin,
+.footer .fa.fa-linkedin {
+  border: 2px solid #48c6ff;
 }
 
 .fa {
   font-size: 33px;
   color: #48c6ff;
   padding: 5px;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .fa:hover {
   border-color: #24d5fd;
-  color: #24d5fd
+  color: #24d5fd;
 }
 
-#response{
+#response {
   margin-top: 10px;
 }
 .grade {
   text-align: center;
+  margin: 0 5px;
   padding: 16px 25px;
   border-radius: 5px;
   font-size: 14px;
   line-height: 124%;
   font-family: Poppins, Roboto, Verdana, Helvetica, Arial, sans-serif;
   font-weight: 500;
+}
+
+.table-container {
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: auto;
+}
+
+.table-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.table-container {
+  scrollbar-width: none;
 }
 
 .grade-table {
@@ -260,12 +275,58 @@ body {
 .green {
   background: rgb(232, 255, 235);
   color: rgb(18, 181, 0);
-
 }
 
 .red {
   background: rgb(255, 235, 232);
   color: rgb(181, 21, 0);
+}
 
+/* Base font size for extra small devices (mobile phones) */
+body {
+  font-size: 14px;
+}
 
+@media (max-width: 576px) {
+  .btn-container {
+    margin: auto;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  body {
+    font-size: 15px;
+  }
+  .btn-container {
+    margin: auto 0;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  body {
+    font-size: 17px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Extra extra large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  body {
+    font-size: 20px;
+  }
 }
