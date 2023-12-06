@@ -14,7 +14,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <div class="menu-wrapper center-relative relative">
+            <div class="menu-wrapper center-relative relative text-center mb-4">
               <div class="header-logo">
                 <a href="https://madison-technologies.com">
                   <img
@@ -50,7 +50,7 @@
       </div>
     </div>
     <div class="container container-sm" id="other">
-      <div class="row justify-content-center mb-3 align-items-center">
+      <div class="row justify-content-center mb-4 align-items-center">
         <div class="col-10 col-lg-4 fs-6">
           <div>
             <!--            <h4 class="title" style="margin: 35px 0 25px 0 ;">Why Scan Your Host?</h4>-->
@@ -113,16 +113,20 @@
             hx-target="#response"
             hx-swap="innerHTML"
           >
-            <div class="mb-2">
-              <label for="email" class="form-label">Email Address:</label>
-              <input
-                type="email"
-                class="form-control input-type"
-                id="email"
-                name="email"
-                required
-                placeholder="user@example.com"
-              />
+            <div class="mb-2 row align-items-center">
+              <div class="col-12 col-lg-2">
+                <label for="email" class="form-label">Email Address:</label>
+              </div>
+              <div class="col-12 col-lg-10">
+                <input
+                  type="email"
+                  class="form-control input-type"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="user@example.com"
+                />
+              </div>
             </div>
             <div class="checkbox-container">
               <input
@@ -146,10 +150,10 @@
             <div></div>
 
             <div class="row">
-              <div class="col-10 col-md-3 btn-container">
+              <div class="col-10 col-lg-3 btn-container text-left">
                 <button type="submit" id="submit" class="btn">VERIFY</button>
               </div>
-              <div class="col-10 col-md-7 my-auto mx-auto">
+              <div class="col-10 col-lg-7 my-auto mx-auto">
                 <p id="response"></p>
               </div>
             </div>
