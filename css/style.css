@@ -283,6 +283,14 @@ body {
 }
 
 @media (max-width: 576px) {
+  .head-text {
+    font-size: 18;
+    text-align: justify;
+  }
+
+  .body-text {
+    text-align: justify;
+  }
   .grade {
     text-align: center;
     margin: 0 5px;

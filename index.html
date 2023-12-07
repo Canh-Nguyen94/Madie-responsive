@@ -38,12 +38,11 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-10 col-md-10 fs-5">
-            <p>
-              Request a port scan on your domain that will be delivered to your
-              inbox upon completion. To scan your domain, enter your email
-              address below. Upon verification, your domain will be queued for
-              scanning. We will scan the top 100 TCP ports on your domain's IP
-              address.
+            <p class="head-text">
+              Request a port scan for your domain and get the results in your
+              inbox. Enter your email below to verify your domain, and we’ll
+              queue it for scanning. The scan will cover the top 100 TCP ports
+              on your domain’s IP address.
             </p>
           </div>
         </div>
@@ -55,11 +54,11 @@
           <div>
             <!--            <h4 class="title" style="margin: 35px 0 25px 0 ;">Why Scan Your Host?</h4>-->
             <div class="row">
-              <div class="col">
+              <div class="col text-center">
                 <img src="/img/scan.svg" alt="IT Security" />
                 <p class="topic">Identify Open Ports</p>
               </div>
-              <div class="col">
+              <div class="col text-center">
                 <img src="/img/ITSecurity.svg" alt="IT Security" />
                 <p class="topic">Find Potential Security Risks</p>
               </div>
@@ -68,7 +67,7 @@
         </div>
         <div class="col-10 col-lg-6 fs-6 tab-content-item">
           <h4 class="title">How Do I Interpret The Results?</h4>
-          <p>
+          <p class="body-text">
             Your emailed report will contain a grade and a list of open TCP
             ports on your server. Use this report to confirm that you have no
             unexpected open ports. Your grade tells you at a glance how your
@@ -88,7 +87,7 @@
               </tbody>
             </table>
           </div>
-          <p style="margin-top: 1rem">
+          <p class="body-text" style="margin-top: 1rem">
             For example, having ports 3306 (MySQL) or 1433 (MSSQL) open to the
             public Internet can be a security risk and will give you a lower
             grade because databases should not be accessed from the Internet.
@@ -101,7 +100,7 @@
       <div class="row justify-content-center">
         <div class="col-10 col-md-10">
           <h4 class="title">Get Started</h4>
-          <p>
+          <p class="body-text">
             Enter your email address below and we will scan the Top 100 TCP
             ports of your domain name. If your domain name resolves to more than
             one IP address, then we will pick one to scan.
@@ -138,7 +137,7 @@
                 aria-invalid="false"
               />
               <label for="terms">
-                <span
+                <span class="body-text"
                   >I am authorized and have permission to scan the domain name
                   that is part of my email address. I agree to receive
                   communications in line with Madison Technologies’
